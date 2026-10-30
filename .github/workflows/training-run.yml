@@ -6,7 +6,7 @@ on:
       duration_minutes:
         description: 'Run duration in minutes (max 180)'
         required: true
-        default: '10'
+        default: '5'
         type: string
       stage:
         description: 'Training stage'
@@ -33,4 +33,4 @@ jobs:
           STAGE: ${{ github.event.inputs.stage }}
           PYTHONUNBUFFERED: '1'
         run: |
-          python -u -m code.run_training
+          python -u code/run_training.py
