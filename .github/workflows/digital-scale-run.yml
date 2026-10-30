@@ -1,0 +1,27 @@
+name: Digital Scale Training Run
+
+on:
+  workflow_dispatch:
+
+jobs:
+  digital-scale:
+    runs-on: ubuntu-latest
+    timeout-minutes: 500
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Digital Scale Machine
+        env:
+          PYTHONUNBUFFERED: '1'
+        run: |
+          python -u code/digital_scale_runner.py
+
+      - name: Upload checkpoint artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: digital-10b-moe-checkpoint
+          path: /tmp/digital_10b_moe_checkpoint.json
