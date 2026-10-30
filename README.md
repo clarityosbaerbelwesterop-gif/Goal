@@ -3,9 +3,11 @@
 Private research repository for building a software-defined compute cluster capable of training frontier-scale models.
 
 ## Current Status (2026-10-30)
-- Research phase underway
-- Completed initial analyses: Anthropic architecture, OpenAI architecture, TPU v5p/Trillium
-- Added: GB300 (Blackwell Ultra) analysis, Gemini 4 Carbon analysis, theoretical GPT-7 architecture, hardware specs target
+- Research phase complete for initial analyses
+- **Digital Datacenter structure completed**
+- Software cluster design, storage architecture, and full SOTA MoE model specs added
+- Virtual mesh prototype in `code/cluster/`
+- Next: Storage implementation primitives, then premium data collection and training
 
 ## Structure
 
@@ -18,38 +20,33 @@ Goal/
 │   ├── gb300-analysis.md
 │   ├── gemini4-carbon.md
 │   └── gpt7-architecture.md
-├── specs/
-│   └── hardware-specs.md
 ├── architecture/
+│   ├── datacenter/
 │   ├── software-cluster/
-│   ├── model-architecture/
-│   ├── training-pipeline/
-│   └── datacenter/
-├── workflows/
-│   ├── cluster-orchestration/
-│   ├── training/
-│   └── evaluation/
+│   ├── storage/
+│   └── model-architecture/
+├── specs/
+│   ├── hardware-specs.md
+│   ├── cluster-specs.md
+│   └── model-specs.md
 ├── code/
 │   ├── cluster/
 │   ├── model/
 │   ├── training/
 │   └── inference/
-└── specs/
-    ├── hardware-specs.md
-    ├── cluster-specs.md
-    └── model-specs.md
+└── workflows/
 ```
 
 ## Objectives
 
-1. **Research**: Comprehensive analysis of OpenAI, Anthropic, Google (Gemini) architectures
-2. **GPT-7 Architecture**: Theoretical design based on published research and 2026 trends
-3. **Hardware Analysis**: TPU v5p/Trillium/Ironwood, GB300 (Blackwell Ultra) specifications
-4. **Software Cluster**: Pure code/workflow cluster matching TPU 8x + 1000 GB300
-5. **Model Architecture**: GPT-7 + Gemini 4 Carbon hybrid design
-6. **Digital Datacenter**: Running end-to-end training pipeline
-7. **Evaluation**: Benchmark against flagship models on reasoning, thinking, adaptive learning, AI agents, coding
+1. **Research**: OpenAI, Anthropic, Google architectures and hardware
+2. **Digital Datacenter**: Software-defined cluster matching high-end hardware
+3. **Effective Storage**: Tiered system for premium data and checkpoints
+4. **SOTA MoE Model**: Best possible model for Reasoning, Research, Adaptive Thinking/Learning, Agents, Computer Use, Math, Coding
+5. **Premium Data Only**: High-quality curated + synthetic for training
+6. **End-to-end Training**: Once infrastructure is ready
 
-## Timeline: End of week - operational digital datacenter training SOTA model
+## Timeline
+Structure and datacenter design first. Training and data collection only after infrastructure is solid.
 
-Next steps: Implement virtual mesh / collective primitives in `code/cluster/`, expand architecture docs, begin training pipeline stubs.
+Next steps: Implement storage primitives and expand cluster code, then premium data pipelines.
