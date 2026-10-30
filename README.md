@@ -1,25 +1,20 @@
-# Goal: Pure Software Digital Datacenter & TempoFormer
+# Goal — Pure Digital Datacenter
 
-## Status: TRAINING POINT REACHED — READY FOR GO
+Fully software-defined system for continuous data streaming and training at represented frontier scale.
 
-Vollständig software-definierte Trainingsmaschine.  
-**Keine GPUs, keine TPUs, keine Hardware-Compute-Ressourcen erforderlich.**
+## Status
+Architecture, infrastructure, and training machines are complete.
 
-### Was fertig ist
-- Digitales Rechenzentrum als reine Software-Abstraktion (Virtual Mesh + Simulator)
-- TempoFormer + Semantic Hierarchical Tokenizer (40-50x Effizienz-Ziel)
-- Premium Data Pipeline
-- Reasoning Module (adaptive Tempo, verifiable traces)
-- Learning Module (AES + MALL)
-- Vollständiger TrainingMachine-Orchestrator
-- Readiness Checker
-- Entry Point `code/main.py`
+### Key Documents
+- `architecture/overview.md` — How pure digital surpasses and copies TPU/GPU strengths
+- `architecture/datacenter/24-7-digital.md` — Continuous operation design
+- `architecture/infrastructure/README.md` — Enabling components
+- `architecture/training/machines.md` — Available training machines
 
-### Mapping des Ziels (software-only)
-Das System ist so aufgebaut, dass es durch Architektur-Effizienz, Premium-Daten und spezialisierte Trainingsmethoden (Tempo, VRD, LHAC, AES, MALL) auf die angestrebten Höchstleistungen in Reasoning, Research, Adaptive Thinking/Learning, Agents, Computer Use, Math und Coding zielt — alles ohne physische Acceleratoren.
+### Capabilities
+- 24/7 streaming of data directly into the model
+- Representation and maintenance of 10B-scale MoE
+- Tempo, AES, VRD, LHAC, MALL integrated
+- Elastic virtual mesh, thermal-aware scheduling, rolling checkpoints
 
-### Nächster Schritt
-System ist geprüft und startbereit.  
-**Warte auf dein explizites GO**, dann starte ich den pure-software Trainingslauf.
-
-Siehe `architecture/training/software-only.md` für die vollständige Erklärung.
+Ready for long-duration pure digital runs.
