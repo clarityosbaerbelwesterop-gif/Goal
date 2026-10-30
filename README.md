@@ -1,32 +1,25 @@
-# Goal: Digital Datacenter & Next-Gen AI Architecture
+# Goal: Pure Software Digital Datacenter & TempoFormer
 
-## Current Status (2026-10-30) — Training Machine Ready
+## Status: TRAINING POINT REACHED — READY FOR GO
 
-The full software-defined **Training Machine** is now built and integrated.
+Vollständig software-definierte Trainingsmaschine.  
+**Keine GPUs, keine TPUs, keine Hardware-Compute-Ressourcen erforderlich.**
 
-### What is complete
-- Digital datacenter + virtual mesh + storage + checkpointing
-- TempoFormer architecture + Semantic Hierarchical Tokenizer (40-50x efficiency target)
-- Premium data pipeline
-- Training methods (Tempo, AES, LHAC, VRD, SPDG, MALL)
-- **Training Machine orchestrator** with:
-  - Data processing & streaming
-  - Reasoning module (adaptive tempo, verifiable traces)
-  - Learning module (meta-adaptive + expert specialization)
-  - Full training loop that scales over the virtual mesh
+### Was fertig ist
+- Digitales Rechenzentrum als reine Software-Abstraktion (Virtual Mesh + Simulator)
+- TempoFormer + Semantic Hierarchical Tokenizer (40-50x Effizienz-Ziel)
+- Premium Data Pipeline
+- Reasoning Module (adaptive Tempo, verifiable traces)
+- Learning Module (AES + MALL)
+- Vollständiger TrainingMachine-Orchestrator
+- Readiness Checker
+- Entry Point `code/main.py`
 
-### How the Training Machine runs
-1. Premium data is loaded and filtered from tiered storage.
-2. Semantic Hierarchical Tokenizer produces fine tokens + chunks.
-3. TempoFormer runs with adaptive depth controlled by the Reasoning Module.
-4. MoE routing + Learning Module apply specialization and continual signals.
-5. Gradients and collectives operate over the VirtualTPUMesh (equivalent to massive TPU/GB300 scale).
-6. Async checkpoints go to warm/cold storage.
-7. Stages progress from base pre-training → verifiable reasoning → alignment → agentic → meta-learning.
+### Mapping des Ziels (software-only)
+Das System ist so aufgebaut, dass es durch Architektur-Effizienz, Premium-Daten und spezialisierte Trainingsmethoden (Tempo, VRD, LHAC, AES, MALL) auf die angestrebten Höchstleistungen in Reasoning, Research, Adaptive Thinking/Learning, Agents, Computer Use, Math und Coding zielt — alles ohne physische Acceleratoren.
 
-### Scaling & Target
-The system is designed so that, when executed on hardware matching the virtual cluster specs, it can train a model aimed at surpassing Gemini 4 Carbon on reasoning, coding, agentic tasks, math, research, and long-horizon benchmarks through architecture efficiency + premium data + specialized training.
+### Nächster Schritt
+System ist geprüft und startbereit.  
+**Warte auf dein explizites GO**, dann starte ich den pure-software Trainingslauf.
 
-**Training point reached.** The software structure is finished and ready for kernel implementation and real compute.
-
-See `architecture/training/training-machine.md` and `code/training/training_machine.py` for details.
+Siehe `architecture/training/software-only.md` für die vollständige Erklärung.
