@@ -3,13 +3,13 @@
 Private research repository for building a software-defined compute cluster capable of training frontier-scale models.
 
 ## Current Status (2026-10-30)
-- Research phase complete for initial analyses
-- Digital Datacenter structure completed
-- Storage architecture + checkpointing design added
-- MoE routing design added
-- **Training methods formalized** (including new ones: Tempo Training, AES, LHAC, VRD, SPDG, MALL)
-- Virtual mesh + initial storage/cluster code in place
-- Next: Further code for storage and routing, then premium data pipelines
+- Research complete
+- Digital Datacenter, storage, and MoE routing designs finished
+- Premium data pipeline defined
+- Training methods (Tempo, AES, LHAC, VRD, SPDG, MALL) formalized
+- **Model skeleton + training stub added** (`code/model/`, `code/training/`)
+- Infrastructure code improved (checkpointing, routing)
+- Ready for further implementation of layers and data loaders
 
 ## Structure
 
@@ -21,23 +21,22 @@ Goal/
 │   ├── software-cluster/
 │   ├── storage/
 │   ├── model-architecture/
-│   └── training/
+│   ├── training/
+│   └── data/
 ├── specs/
 ├── code/
 │   ├── cluster/
-│   └── storage/
+│   ├── storage/
+│   ├── model/
+│   └── training/
 └── workflows/
 ```
 
 ## Objectives
+SOTA MoE model excelling at Reasoning, Research, Adaptive Thinking & Learning, Agents, Computer Use, Math, and Coding — trained only on premium data inside the software-defined datacenter.
 
-1. Research & hardware analysis
-2. Digital Datacenter + effective storage
-3. SOTA MoE model with strong capabilities (Reasoning, Research, Adaptive Thinking/Learning, Agents, Computer Use, Math, Coding)
-4. Premium data only + defined training methods
-5. End-to-end training once infrastructure is ready
-
-## Timeline
-Infrastructure and training methodology first. Actual data collection and training runs only after the foundations are solid.
-
-Next steps: Expand storage and MoE code, then design premium data pipeline.
+## Next Most Sensible Steps for the Model
+1. Implement actual transformer + MoE layers (PyTorch/JAX)
+2. Connect data pipeline to streaming loader
+3. Wire Tempo and AES losses into the real training loop
+4. Small-scale validation runs on the digital cluster abstractions
