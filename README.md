@@ -4,49 +4,40 @@ Private research repository for building a software-defined compute cluster capa
 
 ## Current Status (2026-10-30)
 - Research phase complete for initial analyses
-- **Digital Datacenter structure completed**
-- Software cluster design, storage architecture, and full SOTA MoE model specs added
-- Virtual mesh prototype in `code/cluster/`
-- Next: Storage implementation primitives, then premium data collection and training
+- Digital Datacenter structure completed
+- Storage architecture + checkpointing design added
+- MoE routing design added
+- **Training methods formalized** (including new ones: Tempo Training, AES, LHAC, VRD, SPDG, MALL)
+- Virtual mesh + initial storage/cluster code in place
+- Next: Further code for storage and routing, then premium data pipelines
 
 ## Structure
 
 ```
 Goal/
 ├── research/
-│   ├── anthropic_architecture.md
-│   ├── openai_architecture.md
-│   ├── tpu-analysis.md
-│   ├── gb300-analysis.md
-│   ├── gemini4-carbon.md
-│   └── gpt7-architecture.md
 ├── architecture/
 │   ├── datacenter/
 │   ├── software-cluster/
 │   ├── storage/
-│   └── model-architecture/
+│   ├── model-architecture/
+│   └── training/
 ├── specs/
-│   ├── hardware-specs.md
-│   ├── cluster-specs.md
-│   └── model-specs.md
 ├── code/
 │   ├── cluster/
-│   ├── model/
-│   ├── training/
-│   └── inference/
+│   └── storage/
 └── workflows/
 ```
 
 ## Objectives
 
-1. **Research**: OpenAI, Anthropic, Google architectures and hardware
-2. **Digital Datacenter**: Software-defined cluster matching high-end hardware
-3. **Effective Storage**: Tiered system for premium data and checkpoints
-4. **SOTA MoE Model**: Best possible model for Reasoning, Research, Adaptive Thinking/Learning, Agents, Computer Use, Math, Coding
-5. **Premium Data Only**: High-quality curated + synthetic for training
-6. **End-to-end Training**: Once infrastructure is ready
+1. Research & hardware analysis
+2. Digital Datacenter + effective storage
+3. SOTA MoE model with strong capabilities (Reasoning, Research, Adaptive Thinking/Learning, Agents, Computer Use, Math, Coding)
+4. Premium data only + defined training methods
+5. End-to-end training once infrastructure is ready
 
 ## Timeline
-Structure and datacenter design first. Training and data collection only after infrastructure is solid.
+Infrastructure and training methodology first. Actual data collection and training runs only after the foundations are solid.
 
-Next steps: Implement storage primitives and expand cluster code, then premium data pipelines.
+Next steps: Expand storage and MoE code, then design premium data pipeline.
