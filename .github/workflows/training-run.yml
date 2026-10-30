@@ -2,10 +2,41 @@ name: Pure Software Training Run
 
 on:
   workflow_dispatch:
+    inputs:
+      duration_minutes:
+        description: 'Total duration in minutes'
+        required: true
+        default: '500'
+        type: string
+      data_phase_minutes:
+        description: 'Minutes for premium data collection/generation'
+        required: true
+        default: '150'
+        type: string
+      stage:
+        description: 'Training stage'
+        required: true
+        default: '1'
+        type: string
 
 jobs:
   train:
     runs-on: ubuntu-latest
+    timeout-minutes: 540
     steps:
-      - name: Hello
-        run: echo "Workflow is alive" && python3 --version && pwd && ls -la
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Run Premium Data + Training
+        env:
+          DURATION_MINUTES: ${{ github.event.inputs.duration_minutes }}
+          DATA_PHASE_MINUTES: ${{ github.event.inputs.data_phase_minutes }}
+          STAGE: ${{ github.event.inputs.stage }}
+          PYTHONUNBUFFERED: '1'
+        run: |
+          python -u code/run_training.py
