@@ -2,35 +2,10 @@ name: Pure Software Training Run
 
 on:
   workflow_dispatch:
-    inputs:
-      duration_minutes:
-        description: 'Duration in minutes (1-180)'
-        required: true
-        default: '5'
-        type: string
-      stage:
-        description: 'Stage'
-        required: true
-        default: '1'
-        type: string
 
 jobs:
   train:
     runs-on: ubuntu-latest
-    timeout-minutes: 200
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
-
-      - name: Verify Python
-        run: python --version && python -c "print('Python OK')"
-
-      - name: Run training
-        env:
-          DURATION_MINUTES: ${{ github.event.inputs.duration_minutes }}
-          STAGE: ${{ github.event.inputs.stage }}
-          PYTHONUNBUFFERED: '1'
-        run: python -u code/run_training.py
+      - name: Hello
+        run: echo "Workflow is alive" && python3 --version && pwd && ls -la
