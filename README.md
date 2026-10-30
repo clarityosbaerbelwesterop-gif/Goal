@@ -3,40 +3,25 @@
 Private research repository for building a software-defined compute cluster capable of training frontier-scale models.
 
 ## Current Status (2026-10-30)
-- Research complete
-- Digital Datacenter, storage, and MoE routing designs finished
-- Premium data pipeline defined
-- Training methods (Tempo, AES, LHAC, VRD, SPDG, MALL) formalized
-- **Model skeleton + training stub added** (`code/model/`, `code/training/`)
-- Infrastructure code improved (checkpointing, routing)
-- Ready for further implementation of layers and data loaders
+- Digital datacenter, storage, and training methods complete
+- **New architecture introduced: TempoFormer + Semantic Hierarchical Tokenizer**
+  - Designed for 40-50x effective speed/efficiency
+  - Hierarchical attention, fluid MoE, adaptive tempo depth
+  - Training-ready code skeletons in place
+- Premium data pipeline and all prior designs retained
 
-## Structure
-
-```
-Goal/
-├── research/
-├── architecture/
-│   ├── datacenter/
-│   ├── software-cluster/
-│   ├── storage/
-│   ├── model-architecture/
-│   ├── training/
-│   └── data/
-├── specs/
-├── code/
-│   ├── cluster/
-│   ├── storage/
-│   ├── model/
-│   └── training/
-└── workflows/
-```
+## Key New Components
+- `architecture/model-architecture/tempoformer.md`
+- `architecture/model-architecture/semantic-tokenizer.md`
+- `code/model/tempoformer.py`
+- `code/model/semantic_tokenizer.py`
+- `code/training/tempoformer_trainer.py`
 
 ## Objectives
-SOTA MoE model excelling at Reasoning, Research, Adaptive Thinking & Learning, Agents, Computer Use, Math, and Coding — trained only on premium data inside the software-defined datacenter.
+SOTA-capable MoE model with extreme efficiency, trained only on premium data inside the software-defined datacenter.
 
-## Next Most Sensible Steps for the Model
-1. Implement actual transformer + MoE layers (PyTorch/JAX)
-2. Connect data pipeline to streaming loader
-3. Wire Tempo and AES losses into the real training loop
-4. Small-scale validation runs on the digital cluster abstractions
+## Next Steps to Full Training
+1. Implement actual attention / MoE / state-mixing kernels (PyTorch or JAX)
+2. Connect real premium data loader
+3. Add concrete loss functions (including Tempo and AES)
+4. Run small-scale validation, then scale on the virtual mesh
