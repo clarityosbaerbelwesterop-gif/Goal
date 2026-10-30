@@ -1,24 +1,9 @@
-# Digital Datacenter Architecture
+# Digital Datacenter
 
-Software-defined compute cluster equivalent to 8× TPU v5p + 1000× GB300 (Blackwell Ultra).
+## 24/7 Pure Digital Operation
 
-## Design Principles
-- Pure software abstraction over heterogeneous physical hardware
-- High Model FLOPS Utilization (MFU > 55% target)
-- Fault tolerance and elastic scaling
-- Deterministic training where possible
-- Separation of compute, storage, and networking layers
+- `24-7-digital.md` — Full structure for continuous operation
+- `physical-inspiration.md` — How real hardware concepts (cooling, power, fabric) map to software
+- Continuous loop implementation in `code/datacenter/continuous_loop.py`
 
-## Components
-1. **Compute Layer**: Virtual mesh (TPU-style 3D torus + GB300 NVLink domains)
-2. **Storage Layer**: Tiered high-performance storage for data, checkpoints, and intermediates
-3. **Orchestration**: Workflow engine for job scheduling, elasticity, and monitoring
-4. **Networking Abstraction**: Collective primitives over physical interconnects
-
-## Scale Targets
-- Peak compute: ~2.7 EFLOPS BF16 equivalent
-- Aggregate memory: ~340 TB HBM-equivalent
-- Training tokens: 20T+ (premium data only)
-- Checkpoint interval: < 2 min (async)
-
-See subdirectories for detailed designs.
+The design treats the datacenter as a long-running software system that streams data at scale and maintains a living 10B-scale MoE representation through sparsity, hierarchy, and adaptive scheduling.
