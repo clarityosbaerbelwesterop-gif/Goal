@@ -1,10 +1,12 @@
-# Architecture Overview
+# Architecture
 
-This directory contains the complete design for the digital datacenter, software cluster, storage, and model.
+Complete pure-digital system aiming at frontier operational standards.
 
-- `datacenter/` — Overall digital datacenter design
-- `software-cluster/` — Compute mesh, collectives, fault tolerance
-- `storage/` — Tiered high-performance storage for premium data and checkpoints
-- `model-architecture/` — Detailed SOTA MoE model design
+## Now Includes
+- Data quality gates and curriculum
+- Verifiable reasoning (VRD) and long-horizon agentic (LHAC) paths
+- Evaluation hooks and continuous monitoring
+- Recovery and multi-job continuity
+- 24/7 infrastructure, scheduler, virtual mesh, and training machines
 
-All designs prioritize capability over raw parameter count and enforce premium-data-only training later.
+See subfolders for details. The design is ready for extended digital operation once explicitly started.
