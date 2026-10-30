@@ -1,11 +1,13 @@
 # Cluster Code
 
-Software-defined compute cluster primitives.
+Software-defined compute cluster primitives for the digital datacenter.
 
 ## Modules
-- `virtual_mesh.py`: Logical device mesh abstraction matching TPU/GB300 topologies
+- `virtual_mesh.py`: Logical device mesh abstraction
+- `collectives.py`: AllReduce, AllToAll, etc.
 
 ## Next
-- Collective operations (AllReduce, AllToAll)
-- Memory management / offloading
-- Integration with PyTorch/JAX training loops
+- Full NCCL integration
+- MoE routing engine
+- Elastic training hooks
+- Integration with storage layer
