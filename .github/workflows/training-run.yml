@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       duration_minutes:
-        description: 'Run duration in minutes (100-200)'
+        description: 'Run duration in minutes (max 180)'
         required: true
-        default: '150'
+        default: '10'
         type: string
       stage:
         description: 'Training stage'
@@ -17,7 +17,7 @@ on:
 jobs:
   train:
     runs-on: ubuntu-latest
-    timeout-minutes: 240
+    timeout-minutes: 200
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,5 +31,6 @@ jobs:
         env:
           DURATION_MINUTES: ${{ github.event.inputs.duration_minutes }}
           STAGE: ${{ github.event.inputs.stage }}
+          PYTHONUNBUFFERED: '1'
         run: |
-          python -m code.run_training
+          python -u -m code.run_training
